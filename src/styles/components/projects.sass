@@ -1,7 +1,16 @@
+$text-color: #ecdfcc
+$primary-color: #39612c
+$secondary-color: #528d3f
+$background-dark: rgb(43, 49, 42)
+$background-light: #1E201E
+$link-color: #42d1b2
+$link-hover-color: #2e917b
+$border-radius: 10px
+
 .projects
   padding: 2rem
-  background-color: #1E201E
-  border-radius: 10px 
+  background-color: $background-light // Cor de fundo definida
+  border-radius: $border-radius
   width: 100%
   display: flex
   flex-direction: column
@@ -9,9 +18,9 @@
 
   &-title
     text-align: center
-    font-weight: bold 
+    font-weight: bold
     font-size: 2.5rem
-    color: #5e7556
+    color: $primary-color // Usando o verde definido para o título
 
   &-grid
     display: grid
@@ -22,7 +31,7 @@
 
     // Responsividade para múltiplas colunas
     @media (min-width: 768px)
-      grid-template-columns: 1fr 
+      grid-template-columns: 1fr
 
     @media (min-width: 1500px)
       grid-template-columns: 1fr 1fr
@@ -30,21 +39,19 @@
   .project-card
     display: flex
     flex-direction: row
-    width: 100 // Ajuste a largura conforme necessário
+    width: 100%
     align-items: center
     justify-content: space-between
-    background: #1E201E
-    border-radius: 10px
+    background: $background-dark // Cor do fundo da card
+    border-radius: $border-radius
     overflow: hidden
-    height: 350px 
- 
+    height: 350px
 
     .project-gif
-        width: 100%
-        height: 80%
-        object-fit: cover
-        transform: none
-
+      width: 100%
+      height: 80%
+      object-fit: cover
+      transform: none
 
     .project-content
       padding: 1.5rem
@@ -55,8 +62,8 @@
 
     .project-title
       font-weight: bold
-      font-size: 1.8rem
-      background: linear-gradient(90deg, #5e7556, #6dbd53)
+      font-size: 2rem
+      background: linear-gradient(90deg, $primary-color, $secondary-color) // Gradiente verde
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
       background-clip: text
@@ -65,8 +72,8 @@
     .project-description
       margin: 1rem 0
       font-weight: 500
-      font-size: 1rem
-      color: #ecdfcc
+      font-size: 1.3rem
+      color: $text-color // Cor do texto principal
 
     .project-languages
       display: flex
@@ -76,30 +83,29 @@
       .language-item
         display: flex
         align-items: center
-        color: #ecdfcc
+        color: $text-color
         margin-right: 1rem
         font-size: 1.2rem
         font-weight: bold
-        padding: 0.5rem 
+        padding: 0.5rem
 
         .language-icon
           margin-right: 0.5rem
-          color: #ecdfcc
-          font-size: 2.5rem 
-
+          color: $text-color
+          font-size: 2.5rem
 
     .project-links
-  margin-top: auto
+      margin-top: auto
 
-  a
-    color: #42d1b2 
-    text-decoration: none
-    font-size: 1.2rem
-    font-weight: bold
+      a
+        color: $link-color // Cor de link principal
+        text-decoration: none
+        font-size: 1.2rem
+        font-weight: bold
 
-    &:hover
-      color: #2e917b 
+        &:hover
+          color: $link-hover-color // Cor de hover para links
 
-    .github-icon
-      margin-right: 5px
-      font-size: 1.2em
+        .github-icon
+          margin-right: 5px
+          font-size: 1.2em

@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { SiCplusplus, SiJavascript, SiTypescript, SiReact, SiPython, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiCplusplus, SiJavascript, SiTypescript, SiReact, SiPython, SiHtml5, SiCss3, SiSass } from "react-icons/si";
 import "../styles/components/projects.sass";
 import gif1 from "../img/GIF.gif";
 import gif2 from "../img/scannerGIF.gif";
@@ -43,6 +43,12 @@ const projectsData: Project[] = [
     description: "Project that analyzes a physical pendulum using video data, fitting it to a damped oscillation model to calculate parameters like the quality factor.",
     github: "https://github.com/Gupadovam/APS-PendulumFis2",
     languages: ["Python"], 
+  },
+  {
+    title: "gupadovam.github.io",
+    description: "Welcome to my portfolio website, where I showcase a selection of my projects and share insights about my journey as a developer.",
+    github: "https://github.com/Gupadovam/GustavoPadovam",
+    languages: ["TypeScript", "React", "HTML", "SAAS"],
   }
 ];
 
@@ -55,6 +61,7 @@ const languageIcons: { [key: string]: JSX.Element } = {
   "JavaScript": <SiJavascript className="language-icon" />,
   "HTML": <SiHtml5 className="language-icon"/>,
   "CSS": <SiCss3 className="language-icon"/>,
+  "SAAS": <SiSass className="language-icon"/>,
 };
 
 const Projects: React.FC = () => {

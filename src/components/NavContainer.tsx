@@ -11,7 +11,7 @@ const NavContainer = () => {
   return (
     <div className="nav-container">
       <h1 className="nav-title">
-        Web <span className="nav-title-accent">Dev</span>
+        Web<span className="nav-title-accent">Dev</span>
       </h1>
       <div className="nav-sections">
         <div className="nav-section" onClick={() => scrollToSection('hero')}>

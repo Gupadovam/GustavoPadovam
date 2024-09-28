@@ -1,36 +1,53 @@
 .contact-section
-  padding: 2rem
-  border-radius: 10px
   width: 100%
   display: flex
   flex-direction: column
   align-items: center
-  margin-top: 2rem
+  margin-top: 3rem // Um pouco mais de espaço acima
 
   h2
     font-weight: bold
-    font-size: 1.8rem
+    font-size: 2.5rem // Aumentei o tamanho do título
     background: linear-gradient(90deg, #5e7556, #6dbd53)
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     background-clip: text
     color: transparent
     margin: 1rem 0
-
+    text-align: center // Centralizado para uma melhor estética
 
   p
     color: #ecdfcc
-    font-size: 1rem
+    font-size: 1.5rem // Aumentei o tamanho do texto
     font-weight: bold
-    margin-bottom: 1rem
+    margin-bottom: 1.5rem // Mais espaçamento inferior
+    text-align: center // Centralizado para mais harmonia visual
 
   .social-icons
     display: flex
-    gap: 20px
-    margin-bottom: 2rem
+    gap: 25px 
+    margin-bottom: 2.5rem
 
     a
-      transition: transform 0.3s
+      font-size: 2.5rem 
+      transition: transform 0.3s, color 0.3s // Adicionei transição de cor para um efeito suave
 
       &:hover
-        transform: scale(1.1)
+        transform: scale(1.15) // Aumentei o efeito hover
+        color: #6dbd53 // Mudança de cor no hover para o verde do gradiente
+
+// Ajustes de responsividade para melhorar a aparência em telas menores
+@media (max-width: 768px)
+  .contact-section
+    padding: 2rem
+
+    h2
+      font-size: 2rem
+
+    p
+      font-size: 1.1rem
+
+    .social-icons
+      gap: 15px
+      a
+        font-size: 1.5rem
