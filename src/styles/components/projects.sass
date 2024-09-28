@@ -1,0 +1,105 @@
+.projects
+  padding: 2rem
+  background-color: #1E201E
+  border-radius: 10px 
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center // Centraliza o conteúdo horizontalmente
+
+  &-title
+    text-align: center
+    font-weight: bold 
+    font-size: 2.5rem
+    color: #5e7556
+
+  &-grid
+    display: grid
+    grid-template-columns: 1fr
+    gap: 2rem
+    margin-top: 2rem
+    width: 100%
+
+    // Responsividade para múltiplas colunas
+    @media (min-width: 768px)
+      grid-template-columns: 1fr 
+
+    @media (min-width: 1500px)
+      grid-template-columns: 1fr 1fr
+
+  .project-card
+    display: flex
+    flex-direction: row
+    width: 100 // Ajuste a largura conforme necessário
+    align-items: center
+    justify-content: space-between
+    background: #1E201E
+    border-radius: 10px
+    overflow: hidden
+    height: 350px 
+ 
+
+    .project-gif
+        width: 100%
+        height: 80%
+        object-fit: cover
+        transform: none
+
+
+    .project-content
+      padding: 1.5rem
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      width: 100%
+
+    .project-title
+      font-weight: bold
+      font-size: 1.8rem
+      background: linear-gradient(90deg, #5e7556, #6dbd53)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+
+    .project-description
+      margin: 1rem 0
+      font-weight: 500
+      font-size: 1rem
+      color: #ecdfcc
+
+    .project-languages
+      display: flex
+      flex-wrap: wrap
+      margin-bottom: 1rem
+
+      .language-item
+        display: flex
+        align-items: center
+        color: #ecdfcc
+        margin-right: 1rem
+        font-size: 1.2rem
+        font-weight: bold
+        padding: 0.5rem 
+
+        .language-icon
+          margin-right: 0.5rem
+          color: #ecdfcc
+          font-size: 2.5rem 
+
+
+    .project-links
+  margin-top: auto
+
+  a
+    color: #42d1b2 
+    text-decoration: none
+    font-size: 1.2rem
+    font-weight: bold
+
+    &:hover
+      color: #2e917b 
+
+    .github-icon
+      margin-right: 5px
+      font-size: 1.2em

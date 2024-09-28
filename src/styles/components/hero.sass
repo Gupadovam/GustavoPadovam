@@ -1,0 +1,68 @@
+$text-color: #ecdfcc
+$shadow: 2px 2px 4px #3C3D37
+$border-radius: 10px
+
+.hero-container
+  display: flex 
+  align-items: center  
+  justify-content: center
+  flex-wrap: wrap
+  padding: 20px  
+
+.name
+  display: flex  
+  justify-content: space-between  
+  width: 100%  
+
+.text-container
+  max-width: 38% 
+  transform: translate(15%, 40%)
+  border-radius: $border-radius
+  color: $text-color
+  text-shadow: $shadow
+  font-weight: 600
+  position: relative 
+  padding: 10px
+  font-size: 1.5rem
+  text-align: center
+
+  @media (max-width: 768px) // Ajuste para tablets e celulares
+    max-width: 80%
+    transform: translate(0, 0)
+    font-size: 1.2rem
+
+  @media (max-width: 480px) // Ajuste para celulares menores
+    max-width: 95%
+    transform: translate(0, 0)
+    font-size: 1rem
+
+.name-accent 
+  color: #5e7556
+
+.description 
+  font-weight: bold
+  color: #afafaf
+  font-size: 1rem
+  margin: 20px 0 0 0  
+  text-align: justify
+  line-height: 1.5 
+
+.img
+  width: 100% 
+  max-width: 25%
+  height: auto 
+  transform: translate(-70%, 20%)
+  border-radius: 50%  
+  box-shadow: #101010 0px 0px 10px
+  transition: transform 0.3s ease  
+
+  @media (max-width: 768px) // Ajuste para tablets e celulares
+    max-width: 50%
+    transform: translate(0, 0)
+
+  @media (max-width: 480px) // Ajuste para celulares menores
+    max-width: 70%
+    transform: translate(0, 0)
+
+img:hover
+  transform: translate(-70%, 20%) scale(1.05)  

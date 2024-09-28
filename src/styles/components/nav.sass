@@ -1,0 +1,71 @@
+@use '../variables'
+
+.nav-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  background-color: #181c14
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1000
+  padding: 0 1em
+
+.nav-title
+  padding: 0.7em
+  color: #ecdfcc
+  font-size: 1.5rem
+  font-weight: 1000
+  transform: translateX(10%)
+  text-transform: uppercase
+  flex: 1 
+
+.nav-title-accent
+  color: #5e7556
+
+.nav-sections
+  display: flex
+  gap: 2em
+  justify-content: flex-end
+  flex: 2
+  padding: 0
+
+.nav-section
+  padding: 0.5em 1em
+  border-radius: 5px
+  color: #ecdfcc
+  font-size: 1rem
+  font-weight: 700
+  transform: translateX(-0%)
+  cursor: pointer
+  transition: background 0.3s, transform 0.3s
+
+  &:hover
+    background: variables.$gradient
+      -webkit-background-clip: text
+    transform: translate(-0%,-10%)
+
+
+// Responsividade
+@media (max-width: 768px)
+  .nav-container
+    flex-direction: column
+    padding: 1em
+
+  .nav-title
+    font-size: 1.2rem
+    text-align: center
+    transform: none
+
+  .nav-sections
+    flex-direction: column
+    align-items: center
+    width: 100%
+    gap: 1em
+
+  .nav-section
+    width: 100%
+    text-align: center
+    padding: 0.8em
+    transform: none
