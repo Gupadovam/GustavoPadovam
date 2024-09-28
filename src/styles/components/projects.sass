@@ -18,7 +18,7 @@ $border-radius: 10px
 
   @media (max-width: 768px) // Ajuste para telas menores (celulares)
     padding: 0 // Remove o padding nas laterais
-    border-radius: 0 // Remove o border-radius para ocupar 100% da tela
+    border-radius: 10 // Remove o border-radius para ocupar 100% da tela
 
   &-title
     text-align: center
@@ -52,7 +52,6 @@ $border-radius: 10px
     height: auto
 
     @media (max-width: 768px)
-      border-radius: 0 // Remove as bordas arredondadas no modo mobile
       background-color: $background-light // Muda a cor de fundo para branco
 
     .project-content
@@ -71,8 +70,8 @@ $border-radius: 10px
       transition: none
       transform: none
 
-      @media (max-width: 1000px)
-        display: none
+      // @media (max-width: 1000px)
+      //   display: none
 
     .project-title
       font-weight: bold
