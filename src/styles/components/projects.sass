@@ -9,18 +9,22 @@ $border-radius: 10px
 
 .projects
   padding: 2rem
-  background-color: $background-light // Cor de fundo definida
+  background-color: $background-light
   border-radius: $border-radius
   width: 100%
   display: flex
   flex-direction: column
-  align-items: center // Centraliza o conteúdo horizontalmente
+  align-items: center
+
+  @media (max-width: 768px) // Ajuste para telas menores (celulares)
+    padding: 0 // Remove o padding nas laterais
+    border-radius: 0 // Remove o border-radius para ocupar 100% da tela
 
   &-title
     text-align: center
     font-weight: bold
     font-size: 2.5rem
-    color: $primary-color // Usando o verde definido para o título
+    color: $primary-color
 
   &-grid
     display: grid
@@ -29,7 +33,6 @@ $border-radius: 10px
     margin-top: 2rem
     width: 100%
 
-    // Responsividade para múltiplas colunas
     @media (min-width: 768px)
       grid-template-columns: 1fr
 
@@ -38,20 +41,19 @@ $border-radius: 10px
 
   .project-card
     display: flex
-    flex-direction: row
+    flex-direction: column
     width: 100%
     align-items: center
     justify-content: space-between
-    background: $background-dark // Cor do fundo da card
+    background: $background-dark
     border-radius: $border-radius
     overflow: hidden
-    height: 350px
+    padding: 1rem
+    height: auto
 
-    .project-gif
-      width: 100%
-      height: 80%
-      object-fit: cover
-      transform: none
+    @media (max-width: 768px)
+      border-radius: 0 // Remove as bordas arredondadas no modo mobile
+      background-color: $background-light // Muda a cor de fundo para branco
 
     .project-content
       padding: 1.5rem
@@ -60,20 +62,33 @@ $border-radius: 10px
       justify-content: space-between
       width: 100%
 
+    .project-gif
+      width: 100%
+      height: auto
+      object-fit: cover
+      margin-top: 1rem
+      border-radius: $border-radius
+      transition: none
+      transform: none
+
+      @media (max-width: 1000px)
+        display: none
+
     .project-title
       font-weight: bold
       font-size: 2rem
-      background: linear-gradient(90deg, $primary-color, $secondary-color) // Gradiente verde
+      background: linear-gradient(90deg, $primary-color, $secondary-color)
       -webkit-background-clip: text
       -webkit-text-fill-color: transparent
       background-clip: text
       color: transparent
+      height: auto
 
     .project-description
       margin: 1rem 0
       font-weight: 500
       font-size: 1.3rem
-      color: $text-color // Cor do texto principal
+      color: $text-color
 
     .project-languages
       display: flex
@@ -98,13 +113,13 @@ $border-radius: 10px
       margin-top: auto
 
       a
-        color: $link-color // Cor de link principal
+        color: $link-color
         text-decoration: none
         font-size: 1.2rem
         font-weight: bold
 
         &:hover
-          color: $link-hover-color // Cor de hover para links
+          color: $link-hover-color
 
         .github-icon
           margin-right: 5px

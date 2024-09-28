@@ -26,15 +26,19 @@ $border-radius: 10px
   font-size: 2rem
   text-align: center
 
-  @media (max-width: 768px) // Ajuste para tablets e celulares
+  @media (max-width: 1400px) // Ajuste para tablets
     max-width: 80%
-    transform: translate(0, 0)
-    font-size: 1rem
+    transform: translate(0, 10%)
+    font-size: 1.2rem
+    margin: 0 auto // Centraliza em telas menores
 
   @media (max-width: 480px) // Ajuste para celulares menores
-    max-width: 95%
+    max-width: 90%
+    padding: 15px
     transform: translate(0, 0)
-    font-size: 0.8rem
+    font-size: 0.9rem
+    margin: 0 auto // Centraliza também em dispositivos móveis
+
 
 .name-accent 
   color: #5e7556
@@ -47,6 +51,12 @@ $border-radius: 10px
   text-align: justify
   line-height: 1.5 
 
+  @media (max-width: 480px)
+    font-size: 1rem
+    line-height: 1.4
+    text-align: center
+    margin: 15px 0 0 0
+
 .img
   width: 100% 
   max-width: 25%
@@ -56,13 +66,15 @@ $border-radius: 10px
   box-shadow: #101010 0px 0px 10px
   transition: transform 0.3s ease  
 
-  @media (max-width: 768px) // Ajuste para tablets e celulares
+  @media (max-width: 1400px) // Ajuste para tablets
     max-width: 50%
     transform: translate(0, 0)
 
-  @media (max-width: 480px) // Ajuste para celulares menores
-    max-width: 70%
-    transform: translate(0, 0)
+  @media (max-width: 1400px) // Ajuste para celulares menores
+    display: none // Remove a imagem em dispositivos móveis
 
 img:hover
-  transform: translate(-70%, 20%) scale(1.05)  
+  transform: translate(-70%, 20%) scale(1.05)
+
+  @media (max-width: 1400px)
+    transform: scale(1.05) // Mantém o efeito de hover, sem translate

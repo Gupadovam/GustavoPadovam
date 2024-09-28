@@ -32,11 +32,10 @@ const projectsData: Project[] = [
     languages: ["Python", "C++"], 
   },
   {
-    title: "RichText-Editor",
-    description: "RichText-Editor project is a fun little learning project where I explore creating a text editor with rich text features.",
-    gif: gif3,
-    github: "https://github.com/Gupadovam/RichText-Editor",
-    languages: ["HTML", "JavaScript", "CSS"], 
+    title: "gupadovam.github.io",
+    description: "Welcome to my portfolio website, where I showcase a selection of my projects and share insights about my journey as a developer.",
+    github: "https://github.com/Gupadovam/GustavoPadovam",
+    languages: ["TypeScript", "React", "HTML", "SAAS"],
   },
   {
     title: "APS-PendulumFis2",
@@ -45,10 +44,11 @@ const projectsData: Project[] = [
     languages: ["Python"], 
   },
   {
-    title: "gupadovam.github.io",
-    description: "Welcome to my portfolio website, where I showcase a selection of my projects and share insights about my journey as a developer.",
-    github: "https://github.com/Gupadovam/GustavoPadovam",
-    languages: ["TypeScript", "React", "HTML", "SAAS"],
+    title: "RichText-Editor",
+    description: "RichText-Editor project is a fun little learning project where I explore creating a text editor with rich text features.",
+    gif: gif3,
+    github: "https://github.com/Gupadovam/RichText-Editor",
+    languages: ["HTML", "JavaScript", "CSS"], 
   }
 ];
 
